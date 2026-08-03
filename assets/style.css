@@ -462,7 +462,15 @@ nav.main-nav a.active, nav.main-nav a:hover { color: var(--wine); }
 .story-photo {
   height: 460px;
   border-radius: 6px;
+  overflow: hidden;
   background: repeating-linear-gradient(135deg, #ddd0ba 0px, #ddd0ba 2px, #eee3d2 2px, #eee3d2 40px);
+}
+.story-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 .story-text p { font-size: 15px; line-height: 1.8; color: var(--text-dark); margin-bottom: 16px; }
 .story-text p:first-of-type::first-letter {
