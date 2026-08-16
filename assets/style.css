@@ -710,7 +710,16 @@ footer .col a:hover { color: var(--gold); }
   .gallery-grid, .type-grid, .video-grid, .testimonial-grid, .vendor-grid { grid-template-columns: repeat(2, 1fr); }
   .t-card.wide { grid-column: span 2; }
   .categories, .story, .why-us, .values-grid, .included-grid { grid-template-columns: 1fr; }
-  .story-photo { height: 320px; }
+  .story { gap: 28px; }
+  .story-photo {
+    height: auto;
+    overflow: visible;
+  }
+  .story-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
   .masonry { column-count: 2; }
   .timeline-steps { flex-direction: column; gap: 28px; }
   .pricing { gap: 18px; }
