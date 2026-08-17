@@ -652,6 +652,7 @@ textarea { height: 90px; resize: none; }
 input:focus, select:focus, textarea:focus { outline: none; border-color: var(--wine); }
 .form-submit { text-align: center; margin-top: 6px; }
 .form-status { text-align: center; font-size: 13px; margin-top: 14px; color: var(--wine); display: none; }
+.error-message { font-size: 12px; margin-top: 4px; color: #d32f2f; display: block; font-weight: 500; }
 .direct-contact {
   background: var(--navy); color: var(--ivory-soft); padding: 56px 24px;
   display: flex; justify-content: center; gap: 64px; text-align: center; flex-wrap: wrap;

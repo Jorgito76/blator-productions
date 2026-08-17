@@ -56,21 +56,31 @@
   <h2>Tell Us About Your Event</h2>
   <!-- Connect this form to Formspree (formspree.io) or Netlify Forms to receive submissions by email -->
   <form id="inquiry-form">
-    <div><label>Name</label><input type="text" placeholder="Your full name" required></div>
-    <div><label>Email</label><input type="email" placeholder="you@email.com" required></div>
-    <div><label>Phone</label><input type="tel" placeholder="(555) 555-5555"></div>
-    <div><label>Event Date</label><input type="date"></div>
-    <div><label>Event Type</label>
-      <select>
-        <option>Wedding</option>
-        <option>Corporate Event</option>
-        <option>Private Party</option>
-        <option>School Event</option>
-        <option>Other</option>
+    <div><label>Name</label><input type="text" id="name-field" placeholder="Your full name" required></div>
+    <div><label>Email</label><input type="email" id="email-field" placeholder="you@email.com" required></div>
+    <div><label>Phone</label><input type="tel" id="phone-field" placeholder="(555) 555-5555"></div>
+    <div>
+      <label>Event Date</label>
+      <input type="date" id="event-date" required>
+      <p class="error-message" id="date-error"></p>
+    </div>
+    <div>
+      <label>Event Type</label>
+      <select id="event-type" required>
+        <option value="">-- Select an event type --</option>
+        <option value="Wedding">Wedding</option>
+        <option value="Corporate Event">Corporate Event</option>
+        <option value="Private Party">Private Party</option>
+        <option value="School Event">School Event</option>
+        <option value="Other">Other</option>
       </select>
     </div>
-    <div><label>Venue</label><input type="text" placeholder="Venue name, if known"></div>
-    <div class="full"><label>Message</label><textarea placeholder="Tell us a bit about your event"></textarea></div>
+    <div id="other-type-container" style="display: none;">
+      <label>Please specify event type</label>
+      <input type="text" id="other-type-field" placeholder="What type of event is it?">
+    </div>
+    <div><label>Venue</label><input type="text" id="venue-field" placeholder="Venue name, if known"></div>
+    <div class="full"><label>Message</label><textarea id="message-field" placeholder="Tell us a bit about your event"></textarea></div>
     <div class="full form-submit">
       <button type="submit" class="btn-cta">Send Inquiry</button>
       <p class="form-status"></p>
