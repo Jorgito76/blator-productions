@@ -497,19 +497,28 @@ nav.main-nav a.active, nav.main-nav a:hover { color: var(--wine); }
   height: 380px;
   border-radius: 6px;
   margin-bottom: 18px;
-  background: repeating-linear-gradient(135deg, #ddd0ba 0px, #ddd0ba 2px, #eee3d2 2px, #eee3d2 40px);
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd0ba;
+  background-image: url('./images/DJSetUp16.JPG');
 }
-.showcase-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.showcase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; }
 .showcase-tile {
-  height: 150px;
+  height: 200px;
   border-radius: 4px;
   position: relative;
-  background: repeating-linear-gradient(135deg, #ddd0ba 0px, #ddd0ba 2px, #eee3d2 2px, #eee3d2 40px);
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd0ba;
 }
+#tile-booth { background-image: url('./images/DJSetUp1.JPG'); }
+#tile-dance { background-image: url('./images/DJSetUp5.jpg'); }
+#tile-reception { background-image: url('./images/DJSetUp28.JPG'); }
 .showcase-tile span {
   position: absolute; bottom: 10px; left: 10px;
-  font-size: 11px; color: var(--text-muted);
-  background: rgba(255,255,255,0.75); padding: 3px 8px; border-radius: 2px;
+  font-size: 11px; color: var(--text-dark);
+  background: rgba(255,255,255,0.9); padding: 5px 10px; border-radius: 2px;
+  font-weight: 500;
 }
 .eq-compact { text-align: center; padding: 10px 24px 60px; }
 .eq-compact-inner { max-width: 560px; margin: 0 auto; border-top: 1px solid rgba(27,42,74,0.12); padding-top: 24px; }
@@ -710,6 +719,9 @@ footer .col a:hover { color: var(--gold); }
   .hero h1 { font-size: 36px; }
   .gallery-grid, .type-grid, .video-grid, .testimonial-grid, .vendor-grid { grid-template-columns: repeat(2, 1fr); }
   .t-card.wide { grid-column: span 2; }
+  .showcase-hero { height: 300px; }
+  .showcase-grid { grid-template-columns: repeat(2, 1fr); }
+  .showcase-tile { height: 180px; }
   .categories, .story, .why-us, .values-grid, .included-grid { grid-template-columns: 1fr; }
   .story { gap: 28px; }
   .story-photo {
@@ -738,4 +750,8 @@ footer .col a:hover { color: var(--gold); }
   .t-card.wide { grid-column: span 1; }
   .masonry { column-count: 1; }
   .subnav { gap: 18px; }
+  .showcase-hero { height: 220px; margin-bottom: 12px; }
+  .showcase-grid { grid-template-columns: 1fr; gap: 12px; }
+  .showcase-tile { height: 140px; }
+  .showcase-tile span { font-size: 10px; bottom: 8px; left: 8px; }
 }
