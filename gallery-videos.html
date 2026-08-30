@@ -3,7 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blator Productions | Gallery / Videos</title>
+<meta name="description" content="Watch highlight reels and dance floor moments from live events and weddings with DJ Blator in Utah.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:title" content="Video Highlights | Blator Productions">
+<meta property="og:description" content="Watch highlight reels and dance floor moments from live events and weddings with DJ Blator in Utah.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blatorproductions.com/gallery-videos.html">
+<meta property="og:image" content="https://blatorproductions.com/assets/images/WeddingReception1.JPG">
+<title>Video Highlights | Blator Productions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -22,69 +29,83 @@
   </a>
   <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
   <nav class="main-nav">
-    <a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services-weddings.html">Services</a>
-<a href="vendors.html">Preferred Vendors</a>
-<a href="gallery-photos.html" class="active">Gallery</a>
-<a href="contact.html">Contact</a>
+    <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+<a href="about.html" data-en="About" data-es="Nosotros">About</a>
+<a href="services-weddings.html" data-en="Services" data-es="Servicios">Services</a>
+<a href="vendors.html" data-en="Preferred Vendors" data-es="Proveedores">Preferred Vendors</a>
+<a href="gallery-photos.html" class="active" data-en="Gallery" data-es="Galería">Gallery</a>
+<a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
   </nav>
   <div class="header-right">
     <div class="lang-toggle">
       <button data-lang="en" class="active">EN</button> / <button data-lang="es">ES</button>
     </div>
-    <a href="contact.html" class="btn-cta">Check Availability</a>
+    <a href="contact.html" class="btn-cta" data-en="Check Availability" data-es="Consultar Disponibilidad">Check Availability</a>
   </div>
 </header>
 <div class="subnav">
-    <a href="gallery-photos.html">Photos</a>
-<a href="gallery-videos.html" class="active">Videos</a>
-<a href="gallery-testimonials.html">Testimonials</a>
+    <a href="gallery-photos.html" data-en="Photos" data-es="Fotos">Photos</a>
+<a href="gallery-videos.html" class="active" data-en="Videos" data-es="Videos">Videos</a>
+<a href="gallery-testimonials.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a>
   </div>
 <section class="intro">
-  <p class="section-eyebrow">Watch the Night Unfold</p>
-  <h1>See and Hear the Energy</h1>
-  <p>Highlight reels and moments that show what the room actually feels like — not just what it looks like.</p>
+  <p class="section-eyebrow" data-en="Watch the Night Unfold" data-es="Mira Cómo Cobra Vida la Noche">Watch the Night Unfold</p>
+  <h1 data-en="See and Hear the Energy" data-es="Siente y Escucha la Energía">See and Hear the Energy</h1>
+  <p data-en="Highlight reels and live event footage that show what the room actually feels like — the music, the crowd, and the moments." data-es="Videos destacados y momentos en vivo que transmiten la verdadera atmósfera: la música, la gente y las emociones.">Highlight reels and live event footage that show what the room actually feels like — the music, the crowd, and the moments.</p>
 </section>
 
-<div class="featured-video">
-  <video width="100%" height="600" controls style="object-fit: cover;">
-    <source src="assets/videos/DJ Video 2.MP4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <p class="featured-caption">Featured highlight reel — recent wedding reception</p>
+<div class="video-showcase-container" style="max-width: 1000px; margin: 40px auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+  <div class="video-card" style="background: var(--ivory); border: 1px solid rgba(27,42,74,0.08); border-radius: 8px; overflow: hidden; padding: 18px;">
+    <div style="border-radius: 6px; overflow: hidden; background: #000; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+      <video width="100%" height="100%" controls playsinline preload="metadata" style="object-fit: cover; width: 100%; height: 100%;">
+        <source src="assets/videos/DJ Video 2.MP4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <h3 style="font-size: 18px; margin-top: 14px; margin-bottom: 6px;" data-en="Wedding Reception Highlight" data-es="Resumen de Recepción de Boda">Wedding Reception Highlight</h3>
+    <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;" data-en="Live dance floor transitions and crowd energy during open dancing." data-es="Transiciones en vivo en la pista de baile y la energía de los invitados durante la fiesta.">Live dance floor transitions and crowd energy during open dancing.</p>
+  </div>
+
+  <div class="video-card" style="background: var(--ivory); border: 1px solid rgba(27,42,74,0.08); border-radius: 8px; overflow: hidden; padding: 18px;">
+    <div style="border-radius: 6px; overflow: hidden; background: #000; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+      <video width="100%" height="100%" controls playsinline preload="metadata" style="object-fit: cover; width: 100%; height: 100%;">
+        <source src="assets/videos/DJ Video 3.MP4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <h3 style="font-size: 18px; margin-top: 14px; margin-bottom: 6px;" data-en="Event Atmosphere &amp; Sound Setup" data-es="Ambiente y Montaje de Sonido">Event Atmosphere &amp; Sound Setup</h3>
+    <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;" data-en="Live audio coverage, lighting synchronization, and seamless flow." data-es="Cobertura de audio en directo, sincronización de luces y desarrollo fluido.">Live audio coverage, lighting synchronization, and seamless flow.</p>
+  </div>
 </div>
 
-<div class="video-grid">
-  <div class="video-thumb"><div class="play-btn">&#9658;</div><span>Reception highlight</span></div>
-  <div class="video-thumb"><div class="play-btn">&#9658;</div><span>First dance</span></div>
-  <div class="video-thumb"><div class="play-btn">&#9658;</div><span>Corporate gala</span></div>
-  <div class="video-thumb"><div class="play-btn">&#9658;</div><span>Ceremony moment</span></div>
-  <div class="video-thumb"><div class="play-btn">&#9658;</div><span>Dance floor energy</span></div>
-  <div class="video-thumb"><div class="play-btn">&#9658;</div><span>Client testimonial</span></div>
+<div class="content-block" style="text-align: center; max-width: 650px; margin: 30px auto 70px; padding: 0 24px;">
+  <p class="section-eyebrow" data-en="More Live Clips" data-es="Más Videos en Vivo">More Live Clips</p>
+  <h2 style="margin-bottom: 12px;" data-en="Follow Along for New Video Reels" data-es="Síguenos para Ver Nuevos Videos">Follow Along for New Video Reels</h2>
+  <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 22px;" data-en="We regularly post wedding highlights, dance floor moments, and setup behind-the-scenes on Instagram." data-es="Publicamos constantemente resúmenes de bodas, momentos en la pista de baile y detrás de cámaras en Instagram.">We regularly post wedding highlights, dance floor moments, and setup behind-the-scenes on Instagram.</p>
+  <a href="https://www.instagram.com/officialblator/" target="_blank" rel="noopener noreferrer" class="btn-cta" data-en="Watch on Instagram @OfficialBlator &rarr;" data-es="Ver en Instagram @OfficialBlator &rarr;">Watch on Instagram @OfficialBlator &rarr;</a>
 </div>
 
 <section class="final-cta navy-bg">
-  <h2>Ready to See It Live?</h2>
-  <p>Check availability and let's start planning your event.</p>
-  <a href="contact.html" class="btn-outline-light">Check Availability</a>
+  <h2 data-en="Ready to See It Live?" data-es="¿Listo Para Vivirlo en Vivo?">Ready to See It Live?</h2>
+  <p data-en="Check availability and let's start planning your event." data-es="Revisa disponibilidad y comencemos a planear tu evento.">Check availability and let's start planning your event.</p>
+  <a href="contact.html" class="btn-outline-light" data-en="Check Availability" data-es="Consultar Disponibilidad">Check Availability</a>
 </section>
 <footer>
   <div class="col">
     <h4>Blator Productions</h4>
-    <p>Servicing All Over Utah</p>
+    <p data-en="Servicing All Over Utah" data-es="Servicio en Todo Utah">Servicing All Over Utah</p>
   </div>
   <div class="col">
-    <h4>Explore</h4>
-    <a href="services-weddings.html">Services</a>
-    <a href="vendors.html">Preferred Vendors</a>
-    <a href="gallery-photos.html">Gallery</a>
+    <h4 data-en="Explore" data-es="Explorar">Explore</h4>
+    <a href="services-weddings.html" data-en="Services" data-es="Servicios">Services</a>
+    <a href="vendors.html" data-en="Preferred Vendors" data-es="Proveedores">Preferred Vendors</a>
+    <a href="gallery-photos.html" data-en="Gallery" data-es="Galería">Gallery</a>
   </div>
   <div class="col">
-    <h4>Connect</h4>
-    <a href="https://www.instagram.com/officialblator/">Instagram</a>
-    <a href="https://www.facebook.com/officialblator/">Facebook</a>
-    <a href="contact.html">Contact</a>
+    <h4 data-en="Connect" data-es="Conectar">Connect</h4>
+    <a href="https://www.instagram.com/officialblator/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.facebook.com/officialblator/" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
   </div>
 </footer>
 

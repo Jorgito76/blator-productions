@@ -3,7 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blator Productions | Contact</title>
+<meta name="description" content="Check open dates on the calendar and submit an inquiry to book DJ Blator for your Utah wedding or event.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:title" content="Check Availability & Contact | Blator Productions">
+<meta property="og:description" content="Check open dates on the calendar and submit an inquiry to book DJ Blator for your Utah wedding or event.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blatorproductions.com/contact.html">
+<meta property="og:image" content="https://blatorproductions.com/assets/images/WeddingReception1.JPG">
+<title>Check Availability & Contact | Blator Productions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -22,95 +29,96 @@
   </a>
   <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
   <nav class="main-nav">
-    <a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services-weddings.html">Services</a>
-<a href="vendors.html">Preferred Vendors</a>
-<a href="gallery-photos.html">Gallery</a>
-<a href="contact.html" class="active">Contact</a>
+    <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+<a href="about.html" data-en="About" data-es="Nosotros">About</a>
+<a href="services-weddings.html" data-en="Services" data-es="Servicios">Services</a>
+<a href="vendors.html" data-en="Preferred Vendors" data-es="Proveedores">Preferred Vendors</a>
+<a href="gallery-photos.html" data-en="Gallery" data-es="Galería">Gallery</a>
+<a href="contact.html" class="active" data-en="Contact" data-es="Contacto">Contact</a>
   </nav>
   <div class="header-right">
     <div class="lang-toggle">
       <button data-lang="en" class="active">EN</button> / <button data-lang="es">ES</button>
     </div>
-    <a href="contact.html" class="btn-cta">Check Availability</a>
+    <a href="contact.html" class="btn-cta" data-en="Check Availability" data-es="Consultar Disponibilidad">Check Availability</a>
   </div>
 </header>
 
 <section class="intro">
-  <p class="section-eyebrow">Let's Talk</p>
-  <h1>Check Availability &amp; Get in Touch</h1>
-  <p>Take a look at open dates below, then tell us a bit about your event.</p>
+  <p class="section-eyebrow" data-en="Let's Talk" data-es="Conversemos">Let's Talk</p>
+  <h1 data-en="Check Availability &amp; Get in Touch" data-es="Consulta Disponibilidad y Contáctanos">Check Availability &amp; Get in Touch</h1>
+  <p data-en="Take a look at open dates below, then tell us a bit about your event." data-es="Revisa las fechas disponibles en el calendario y cuéntanos sobre tu evento.">Take a look at open dates below, then tell us a bit about your event.</p>
 </section>
 
 <div class="content-block">
-  <h2>Open Dates</h2>
+  <h2 data-en="Open Dates" data-es="Fechas Disponibles">Open Dates</h2>
   <div class="calendar-card">
-  <iframe src="https://calendar.google.com/calendar/embed?src=df37dcd07550284da900d531f1c812bafc930bb83453947094b33749e1e759be%40group.calendar.google.com&ctz=America%2FDenver" style="border: 0" width="1000" height="650" frameborder="0" scrolling="no"></iframe>
-  <p class="calendar-note">Calendar is managed privately by DJ Blator and updates automatically</p>
+    <iframe src="https://calendar.google.com/calendar/embed?src=df37dcd07550284da900d531f1c812bafc930bb83453947094b33749e1e759be%40group.calendar.google.com&ctz=America%2FDenver" style="border: 0" width="1000" height="650" frameborder="0" scrolling="no"></iframe>
+  </div>
+  <p class="calendar-note" data-en="Calendar is managed privately by DJ Blator and updates automatically" data-es="El calendario es administrado por DJ Blator y se actualiza automáticamente">Calendar is managed privately by DJ Blator and updates automatically</p>
 </div>
 
 <hr class="divider">
 
-<div class="content-block"></div>
-  <h2>Tell Us About Your Event</h2>
+<div class="content-block">
+  <h2 data-en="Tell Us About Your Event" data-es="Cuéntanos Sobre Tu Evento">Tell Us About Your Event</h2>
   <!-- Connect this form to Formspree (formspree.io) using the @formspree/ajax CDN for AJAX submissions. Keeps a non-JS fallback via action/method -->
   <form id="inquiry-form" action="https://formspree.io/f/mbgrzwyo" method="POST">
     <!-- form-level success / error containers (managed by @formspree/ajax) -->
-    <div data-fs-success class="form-success" style="display:none;">Thanks — your message has been sent.</div>
+    <div data-fs-success class="form-success" style="display:none;" data-en="Thanks — your message has been sent." data-es="¡Gracias! Tu mensaje ha sido enviado exitosamente.">Thanks — your message has been sent.</div>
     <div data-fs-error class="form-error" style="display:none;"></div>
 
     <div>
-      <label for="name-field">Name</label>
-      <input type="text" id="name-field" name="name" data-fs-field placeholder="Your full name" required>
+      <label for="name-field" data-en="Name" data-es="Nombre Completo">Name</label>
+      <input type="text" id="name-field" name="name" data-fs-field placeholder="Your full name" data-en-placeholder="Your full name" data-es-placeholder="Tu nombre completo" required>
       <span data-fs-error="name" class="field-error"></span>
     </div>
 
     <div>
-      <label for="email-field">Email</label>
-      <input type="email" id="email-field" name="email" data-fs-field placeholder="you@email.com" required>
+      <label for="email-field" data-en="Email" data-es="Correo Electrónico">Email</label>
+      <input type="email" id="email-field" name="email" data-fs-field placeholder="you@email.com" data-en-placeholder="you@email.com" data-es-placeholder="tu@correo.com" required>
       <span data-fs-error="email" class="field-error"></span>
     </div>
 
     <div>
-      <label for="phone-field">Phone</label>
-      <input type="tel" id="phone-field" name="phone" placeholder="(555) 555-5555">
+      <label for="phone-field" data-en="Phone" data-es="Teléfono">Phone</label>
+      <input type="tel" id="phone-field" name="phone" placeholder="(555) 555-5555" data-en-placeholder="(555) 555-5555" data-es-placeholder="(555) 555-5555">
       <span data-fs-error="phone" class="field-error"></span>
     </div>
 
     <div>
-      <label for="event-date">Event Date</label>
+      <label for="event-date" data-en="Event Date" data-es="Fecha del Evento">Event Date</label>
       <input type="date" id="event-date" name="event_date" required>
       <p class="error-message" id="date-error"></p>
     </div>
 
     <div>
-      <label for="event-type">Event Type</label>
+      <label for="event-type" data-en="Event Type" data-es="Tipo de Evento">Event Type</label>
       <select id="event-type" name="event_type" required>
-        <option value="">-- Select an event type --</option>
-        <option value="Wedding">Wedding</option>
-        <option value="Corporate Event">Corporate Event</option>
-        <option value="Private Party">Private Party</option>
-        <option value="School Event">School Event</option>
-        <option value="Other">Other</option>
+        <option value="" data-en="-- Select an event type --" data-es="-- Selecciona un tipo de evento --">-- Select an event type --</option>
+        <option value="Wedding" data-en="Wedding" data-es="Boda">Wedding</option>
+        <option value="Corporate Event" data-en="Corporate Event" data-es="Evento Corporativo">Corporate Event</option>
+        <option value="Private Party" data-en="Private Party" data-es="Fiesta Privada">Private Party</option>
+        <option value="School Event" data-en="School Event" data-es="Evento Escolar">School Event</option>
+        <option value="Other" data-en="Other" data-es="Otro">Other</option>
       </select>
       <span data-fs-error="event_type" class="field-error"></span>
     </div>
 
     <div id="other-type-container" style="display: none;">
-      <label for="other-type-field">Please specify event type</label>
-      <input type="text" id="other-type-field" name="other_event_type" placeholder="What type of event is it?">
+      <label for="other-type-field" data-en="Please specify event type" data-es="Por favor especifica el tipo de evento">Please specify event type</label>
+      <input type="text" id="other-type-field" name="other_event_type" placeholder="What type of event is it?" data-en-placeholder="What type of event is it?" data-es-placeholder="¿Qué tipo de evento es?">
     </div>
 
     <div>
-      <label for="venue-field">Venue</label>
-      <input type="text" id="venue-field" name="venue" placeholder="Venue name, if known">
+      <label for="venue-field" data-en="Venue" data-es="Lugar / Salón">Venue</label>
+      <input type="text" id="venue-field" name="venue" placeholder="Venue name, if known" data-en-placeholder="Venue name, if known" data-es-placeholder="Nombre del salón o lugar (si ya lo sabes)">
       <span data-fs-error="venue" class="field-error"></span>
     </div>
 
     <div class="full">
-      <label for="message-field">Message</label>
-      <textarea id="message-field" name="message" data-fs-field placeholder="Tell us a bit about your event"></textarea>
+      <label for="message-field" data-en="Message" data-es="Mensaje">Message</label>
+      <textarea id="message-field" name="message" data-fs-field placeholder="Tell us a bit about your event" data-en-placeholder="Tell us a bit about your event" data-es-placeholder="Cuéntanos un poco sobre tu evento y lo que tienes en mente"></textarea>
       <span data-fs-error="message" class="field-error"></span>
     </div>
 
@@ -118,7 +126,7 @@
     <input type="hidden" name="_subject" value="New website inquiry — Blator Productions">
 
     <div class="full form-submit">
-      <button type="submit" class="btn-cta" data-fs-submit-btn>Send Inquiry</button>
+      <button type="submit" class="btn-cta" data-fs-submit-btn data-en="Send Inquiry" data-es="Enviar Consulta">Send Inquiry</button>
       <p class="form-status"></p>
     </div>
   </form>
@@ -132,25 +140,25 @@
 </div>
 
 <section class="direct-contact">
-  <div class="item"><h4>Email</h4><p>officialblator@gmail.com</p></div>
-  <div class="item"><h4>Follow</h4><p>@OfficialBlator</p></div>
+  <div class="item"><h4 data-en="Email" data-es="Correo">Email</h4><p><a href="mailto:officialblator@gmail.com">officialblator@gmail.com</a></p></div>
+  <div class="item"><h4 data-en="Follow" data-es="Síguenos">Follow</h4><p><a href="https://www.instagram.com/officialblator/" target="_blank" rel="noopener noreferrer">@OfficialBlator</a></p></div>
 </section>
 <footer>
   <div class="col">
     <h4>Blator Productions</h4>
-    <p>Servicing All Over Utah</p>
+    <p data-en="Servicing All Over Utah" data-es="Servicio en Todo Utah">Servicing All Over Utah</p>
   </div>
   <div class="col">
-    <h4>Explore</h4>
-    <a href="services-weddings.html">Services</a>
-    <a href="vendors.html">Preferred Vendors</a>
-    <a href="gallery-photos.html">Gallery</a>
+    <h4 data-en="Explore" data-es="Explorar">Explore</h4>
+    <a href="services-weddings.html" data-en="Services" data-es="Servicios">Services</a>
+    <a href="vendors.html" data-en="Preferred Vendors" data-es="Proveedores">Preferred Vendors</a>
+    <a href="gallery-photos.html" data-en="Gallery" data-es="Galería">Gallery</a>
   </div>
   <div class="col">
-    <h4>Connect</h4>
-    <a href="https://www.instagram.com/officialblator/">Instagram</a>
-    <a href="https://www.facebook.com/officialblator/">Facebook</a>
-    <a href="contact.html">Contact</a>
+    <h4 data-en="Connect" data-es="Conectar">Connect</h4>
+    <a href="https://www.instagram.com/officialblator/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.facebook.com/officialblator/" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
   </div>
 </footer>
 
