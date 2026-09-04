@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
     toggle.addEventListener('click', function () {
       nav.classList.toggle('open');
     });
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+      });
+    });
   }
 
   // ===== FAQ accordion =====
@@ -33,14 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
-
-  // ===== Video thumbnails (placeholder click behavior) =====
-  document.querySelectorAll('.video-thumb, .featured-frame').forEach(function (v) {
-    v.addEventListener('click', function () {
-      // Replace this with an actual video embed (YouTube/Vimeo iframe) or lightbox.
-      console.log('Video placeholder clicked — swap in a real embed here.');
-    });
-  });
 
   // ===== Phone number formatting and validation =====
   var phoneField = document.querySelector('#phone-field');
@@ -105,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function validateEventDate(dateString) {
+    if (!dateErrorMessage) return true;
     dateErrorMessage.textContent = '';
     dateErrorMessage.style.color = '#d32f2f';
 
@@ -113,14 +112,17 @@ document.addEventListener('DOMContentLoaded', function () {
       return false;
     }
 
-    var selectedDate = new Date(dateString);
-    var today = new Date();
-    today.setHours(0, 0, 0, 0);
+    var parts = dateString.split('-');
+    if (parts.length === 3) {
+      var selectedDate = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+      var today = new Date();
+      today.setHours(0, 0, 0, 0);
 
-    if (selectedDate < today) {
-      dateErrorMessage.textContent = 'Event date cannot be in the past. Please select a future date.';
-      eventDateInput.value = '';
-      return false;
+      if (selectedDate < today) {
+        dateErrorMessage.textContent = 'Event date cannot be in the past. Please select an upcoming date.';
+        if (eventDateInput) eventDateInput.value = '';
+        return false;
+      }
     }
 
     return true;
@@ -128,11 +130,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (form) {
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
       // Validate event date
-      var eventDateValue = eventDateInput.value;
+      var eventDateValue = eventDateInput ? eventDateInput.value : '';
       if (!validateEventDate(eventDateValue)) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
         return false;
       }
 
@@ -140,44 +142,43 @@ document.addEventListener('DOMContentLoaded', function () {
       var nameField = document.querySelector('#name-field');
       var emailField = document.querySelector('#email-field');
 
-      if (!nameField.value.trim()) {
+      if (!nameField || !nameField.value.trim()) {
         alert('Please enter your name.');
-        nameField.focus();
+        if (nameField) nameField.focus();
+        e.preventDefault();
+        e.stopImmediatePropagation();
         return false;
       }
 
-      if (!emailField.value.trim()) {
+      if (!emailField || !emailField.value.trim()) {
         alert('Please enter your email.');
-        emailField.focus();
+        if (emailField) emailField.focus();
+        e.preventDefault();
+        e.stopImmediatePropagation();
         return false;
       }
 
-      if (!eventTypeSelect.value) {
+      if (!eventTypeSelect || !eventTypeSelect.value) {
         alert('Please select an event type.');
-        eventTypeSelect.focus();
+        if (eventTypeSelect) eventTypeSelect.focus();
+        e.preventDefault();
+        e.stopImmediatePropagation();
         return false;
       }
 
       // Validate phone number if provided
-      var phoneValue = phoneField.value.replace(/\D/g, '');
-      if (phoneValue.length > 0 && phoneValue.length !== 10) {
-        alert('Please enter a valid 10-digit phone number.');
-        phoneField.focus();
-        return false;
+      if (phoneField) {
+        var phoneValue = phoneField.value.replace(/\D/g, '');
+        if (phoneValue.length > 0 && phoneValue.length !== 10) {
+          alert('Please enter a valid 10-digit phone number.');
+          phoneField.focus();
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          return false;
+        }
       }
 
-      // If "Other" is selected, it's optional but can be filled
-      // Form is ready to submit
-      var status = document.querySelector('.form-status');
-      if (status) {
-        status.style.display = 'block';
-        status.textContent = "Thank you! Your inquiry has been sent. We'll be in touch soon.";
-        status.style.color = '#4caf50';
-      }
-
-      // TODO: Connect to Formspree or Netlify Forms
-      // For now, this just shows a success message
-      // this.submit(); // Uncomment when connected to email service
+      // Form is valid - let Formspree or native form submission handle the post
     });
   }
 
@@ -200,7 +201,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     document.querySelectorAll('[data-en]').forEach(function (el) {
       var text = el.getAttribute('data-' + lang);
-      if (text) { el.textContent = text; }
+      if (text !== null && text !== undefined) {
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          if (el.hasAttribute('placeholder')) {
+            el.setAttribute('placeholder', text);
+          }
+        } else {
+          el.innerHTML = text;
+        }
+      }
+    });
+    document.querySelectorAll('[data-en-placeholder]').forEach(function (el) {
+      var ph = el.getAttribute('data-' + lang + '-placeholder');
+      if (ph) {
+        el.setAttribute('placeholder', ph);
+      }
     });
     document.documentElement.setAttribute('lang', lang);
   }
