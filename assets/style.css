@@ -200,6 +200,12 @@ nav.main-nav a.active, nav.main-nav a:hover { color: var(--wine); }
   position: relative;
   overflow: hidden;
 }
+.gallery-tile > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .gallery-tile span {
   position: absolute;
   bottom: 10px;
@@ -581,6 +587,14 @@ nav.main-nav a.active, nav.main-nav a:hover { color: var(--wine); }
   break-inside: avoid; margin-bottom: 16px; border-radius: 4px;
   background: repeating-linear-gradient(135deg, #ddd0ba 0px, #ddd0ba 2px, #eee3d2 2px, #eee3d2 40px);
   position: relative;
+  overflow: hidden;
+}
+.masonry-tile > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
 }
 .masonry-tile span {
   position: absolute; bottom: 10px; left: 10px; font-size: 11px; color: var(--text-muted);
